@@ -1,3 +1,4 @@
+"""Модуль для работы с HTTP сервером и классом TestMe"""
 import http.server
 import socketserver
 
@@ -6,7 +7,6 @@ PORT = 8000
 class TestMe:
     def take_five(self):
         return 5
-
     def port(self):
         return PORT
 
@@ -16,4 +16,3 @@ if __name__ == '__main__':
     with socketserver.TCPServer(("", PORT), Handler) as http:
         print("serving at port", PORT)
         http.serve_forever()
-
